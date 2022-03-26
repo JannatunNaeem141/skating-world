@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
-    margin: 100px 50px;
+    margin: 100px 50px 0 50px;
 }
 .cart-container{
     background-color: rgb(182, 252, 228);

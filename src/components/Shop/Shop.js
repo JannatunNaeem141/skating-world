@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import Questions from '../Questions/Questions';
 import './Shop.css'
 
 const Shop = () => {
@@ -18,7 +19,7 @@ const Shop = () => {
     }
 
     // Clear cart 
-    const innerCartValue = document.getElementById('innerCart')
+    const innerCartValue = document.getElementById('innerCart');
     const clearAll = () => {
         innerCartValue.innerHTML = '';
     }
@@ -54,6 +55,9 @@ const Shop = () => {
                 <div>
                     <button onClick={clearAll} className="cartBtns">Clear All</button>
                 </div>
+            </div>
+            <div>
+                <Questions></Questions>
             </div>
         </div >
     );
