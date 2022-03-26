@@ -4,31 +4,54 @@ import './Shop.css'
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
+    // Cart maintain
     const handleAddToCart = (product) => {
-        console.log(product.name)
+        const newCart = [...cart, product.name];
+        setCart(newCart);
+    }
+
+    // Clear all button 
+    const innerCartValue = document.getElementById('innerCart')
+    const clearAll = () => {
+        innerCartValue.innerHTML = '';
     }
 
     return (
         <div className='shop-container'>
-            <div className="products-container">
-                {
-                    products.map(product => <Product
-                        key={product.id}
-                        product={product}
-                        handleAddToCart={handleAddToCart}
-                    ></Product>)
-                }
+            <div>
+                <div>
+                    <h1 className='heading'>Skating World</h1>
+                    <p className='heading-text'>Choose your skate and run freely.</p>
+                </div>
+                <div className="products-container">
+                    {
+                        products.map(product => <Product
+                            key={product.id}
+                            product={product}
+                            handleAddToCart={handleAddToCart}
+                        ></Product>)
+                    }
+                </div>
+
             </div>
             <div className="cart-container">
-                <h3>order summary</h3>
+                <h3>Cart</h3>
+                <div id='innerCart'>
+                    {
+                        cart.map(item => <p>{item}</p>)
+                    }
+                </div>
+                <button>Choose one</button>
+                <button onClick={clearAll}>Clear All</button>
             </div>
-        </div>
+        </div >
     );
 };
 
