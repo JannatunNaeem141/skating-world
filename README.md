@@ -1,6 +1,6 @@
 # Skating World
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live link: [https://lucent-rabanadas-513964.netlify.app](https://lucent-rabanadas-513964.netlify.app).
 
 ## Available Scripts
 
