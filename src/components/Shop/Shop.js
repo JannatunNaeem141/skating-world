@@ -17,7 +17,7 @@ const Shop = () => {
         setCart(newCart);
     }
 
-    // Clear all button 
+    // Clear cart 
     const innerCartValue = document.getElementById('innerCart')
     const clearAll = () => {
         innerCartValue.innerHTML = '';
@@ -48,8 +48,12 @@ const Shop = () => {
                         cart.map(item => <p>{item}</p>)
                     }
                 </div>
-                <button>Choose one</button>
-                <button onClick={clearAll}>Clear All</button>
+                <div>
+                    <button>Choose one</button>
+                </div>
+                <div>
+                    <button onClick={clearAll}>Clear All</button>
+                </div>
             </div>
         </div >
     );
