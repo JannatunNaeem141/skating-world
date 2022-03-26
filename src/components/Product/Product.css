@@ -27,7 +27,7 @@
 }
 .btn-cart{
     width: 100%;
-    background-color: #FFE0B3;
+    background-color: rgb(8, 226, 154);
     border: none;
     border-radius: 0px 0px 8px 8px;
     transition: 0.5s;
@@ -42,7 +42,7 @@
     margin-right: 5px;
 }
 .btn-cart:hover{
-    background-color: orange;
+    background-color: rgb(182, 252, 228);
 }
 .btn-cart p{
     font-weight: 700;

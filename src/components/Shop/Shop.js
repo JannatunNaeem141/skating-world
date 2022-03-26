@@ -49,10 +49,10 @@ const Shop = () => {
                     }
                 </div>
                 <div>
-                    <button>Choose one</button>
+                    <button className='cartBtns'>Choose one</button>
                 </div>
                 <div>
-                    <button onClick={clearAll}>Clear All</button>
+                    <button onClick={clearAll} className="cartBtns">Clear All</button>
                 </div>
             </div>
         </div >
